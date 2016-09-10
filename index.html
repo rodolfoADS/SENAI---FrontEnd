@@ -1,0 +1,66 @@
+<!--   
+2     +-----------------------------------------------------------+   
+3     |                       Bug no código                       | 
+4     +-----------------------------------------------------------+    
+5 --> 
+6 
+ 
+7 <!DOCTYPE html> 
+8 <html lang="pt-br"> 
+9   <head> 
+10       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+11       <link rel="stylesheet" type="text/css" href="assets/main.css"> 
+12        
+13       <script type="text/javascript" src="tarefas.json"></script> 
+14       <script type="text/javascript" src="script.js"></script> 
+15       <title>Desafio FrontEnd - TodoList</title> 
+16   </head> 
+17   <body onload="readJSON();"> 
+18     <!-- APP --> 
+19   	<div id="app"> 
+20       <!-- NAV --> 
+21   		<nav> 
+22   			<ul class="tabs"> 
+23   				<li class="active" onclick="clickNaoFeitas()" id="tabNaoFeitas"><a  href="#" data-tabindex="0" title="NÃO FEITAS">NÃO FEITAS</a></li> 
+24   				<li onclick="clickFeitas()" id="tabFeitas"><a href="#"  data-tabindex="1" title="FEITAS">FEITAS</a></li> 
+25   			</ul> 
+26   		</nav> 
+27       <!-- END NAV --> 
+28 
+ 
+29       <!-- CONTEUDOTAB --> 
+30   		<div id="conteudoTab"> 
+31         <!-- NAOFEITAS --> 
+32   			<section id="naoFeitas" class="active"> 
+33   				<ul id="ListNaoFeitas"> 
+34              
+35          
+36           </ul> 
+37   				<div id="formAdicionarTarefa" > 
+38   					<textarea name="descricao" id="txtDescricao" onkeyup="contaCaracter()"  placeholder="Insira uma tarefa"></textarea> 
+39   					<button onclick="addTask()" >Adicionar</button> 
+40   					<span id="erro"></span> 
+41   					<span id="contador">140</span> 
+42   				</div> 
+43   			</section> 
+44         <!-- END NAOFEITAS --> 
+45 
+ 
+46         <!-- FEITAS --> 
+47   			<section id="feitas"> 
+48   				<ul id="ListFeitas"> 
+49             
+50           </ul> 
+51   			</section> 
+52         <!-- END FEITAS --> 
+53   		</div> 
+54       <!-- END CONTEUDOTAB --> 
+55 
+ 
+56   	</div> 
+57     <!-- END APP --> 
+58 
+ 
+59      
+60   </body> 
+61 </html> 
